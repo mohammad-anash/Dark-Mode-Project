@@ -1,19 +1,28 @@
-const outerBox = document.querySelector(".box");
-const innerbox = document.querySelector(".innerbox");
+const layer = document.querySelector(".innerbox");
+const plus = document.querySelector(".plus");
+const minuse = document.querySelector(".minuse");
+const percentage = document.querySelector(".percentage");
 
-let counter = 0;
-innerbox.addEventListener("click", function () {
-  counter++;
+let count = 60;
+let showPercentage;
+plus.addEventListener("click", function () {
+  count += 10;
 
-  if (counter % 2 == 0) {
-    innerbox.style.left = 42 + "px";
-    document.body.style.backgroundColor = "black";
-    innerbox.style.border = "2px solid white";
-    outerBox.style.border = "2px solid white";
-  } else {
-    innerbox.style.left = "";
-    document.body.style.backgroundColor = "white";
-    innerbox.style.border = "2px solid black";
-    outerBox.style.border = "2px solid black";
+  if (count > 200) {
+    count = 200;
   }
+
+  layer.style.width = `${count}px`;
+  percentage.textContent = `${count}%`;
+});
+
+minuse.addEventListener("click", function () {
+  count -= 10;
+
+  if (count < 0) {
+    count = 0;
+  }
+
+  layer.style.width = `${count}px`;
+  percentage.textContent = `${count}%`;
 });

@@ -2,40 +2,44 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "averta cy w10";
 }
 
 html,
 body {
   width: 100%;
   height: 100%;
+  background-color: rgb(43, 42, 42);
 }
 
 .container {
+  gap: 20px;
+  height: 115vh;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  z-index: 999999;
 }
 
 .box {
-  width: 70px;
-  height: 30px;
-  border-radius: 50px;
-  border: 2px solid black;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  border: 2px solid "black";
+  width: 200px;
+  height: 20px;
+  background-color: rgb(97, 97, 97);
 }
 
 .innerbox {
-  transition: all ease 0.5s;
-  position: relative;
-  border: 2px solid "black";
-  margin: 2px;
-  width: 20px;
+  width: 167px;
   height: 20px;
-  border: 2px solid grey;
-  border-radius: 50%;
+  background-color: green;
+}
+
+.btn {
+  cursor: pointer;
+  font-size: 2rem;
+  color: wheat;
+}
+
+
+.percentage{
+    color: wheat;
 }
